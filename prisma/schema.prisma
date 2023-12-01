@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model iad {
+  id                            String    @id @default(uuid())
+  account                       String?
+  sync                          DateTime?
+  name                          String?
+  email                         String
+  statecountconnected           String?
+  notifyFrom                    DateTime?
+  syncFrom                      String?
+  oauth2                        Json?   
+  imapServerInfo                Json?
+  state                         String?
+  stateCountAuthenticationError String?
+  stateCountConnectError        String?
+  lastErrorState                Json?     @default("{}")
+  statecountsyncing             String?
+  listRegistry                  String?
+  copy                          Boolean?
+  tz                            String?
+  smtp                          Json?     @default("{}")
+  imap                          Json?     @default("{}")
+}

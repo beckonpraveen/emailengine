@@ -13,3 +13,7 @@ config/development.toml
 .okta.env
 system.env
 keylog.txt
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

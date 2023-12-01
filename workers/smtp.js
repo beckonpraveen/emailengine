@@ -341,6 +341,8 @@ async function init() {
         let messageMeta = {};
         let stream = processMessage(rawStream, session, messageMeta);
 
+        console.log("PK on data ")
+
         stream.on('readable', () => {
             let chunk;
             while ((chunk = stream.read()) !== null) {

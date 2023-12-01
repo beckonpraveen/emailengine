@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `iad` ADD COLUMN `smtp` JSON NULL,
+    ADD COLUMN `syncFrom` DATETIME(3) NULL,
+    ADD COLUMN `tz` VARCHAR(191) NULL;
