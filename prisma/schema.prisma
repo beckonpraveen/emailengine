@@ -32,4 +32,15 @@ model iad {
   tz                            String?
   smtp                          Json?     @default("{}")
   imap                          Json?     @default("{}")
+  proxy                         String?
+  smtpEhloName                  String?
+  path                          String?
+  webhooks                      String?
+  webhookErrorFlag              Json?     @default("{}")
+}
+
+model iat{
+  id                            String    @id @default(uuid())
+  token                         String?
+  account                       String?
 }

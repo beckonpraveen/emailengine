@@ -1406,6 +1406,7 @@ When making API calls remember that requests against the same account are queued
 
                 case 'outlook': {
                     const r = await oAuth2Client.getToken(request.query.code);
+                    console.log("outlook token",r);
                     if (!r || !r.access_token) {
                         let error = Boom.boomify(new Error(`Oauth failed: did not get token`), { statusCode: 400 });
                         throw error;
