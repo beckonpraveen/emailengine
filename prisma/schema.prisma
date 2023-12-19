@@ -14,11 +14,11 @@ datasource db {
 model iad {
   id                            String    @id @default(uuid())
   account                       String?
-  sync                          DateTime?
+  sync                          String?
   name                          String?
   email                         String
   statecountconnected           String?
-  notifyFrom                    DateTime?
+  notifyFrom                    String?
   syncFrom                      String?
   oauth2                        Json?   
   imapServerInfo                Json?
@@ -28,7 +28,7 @@ model iad {
   lastErrorState                Json?     @default("{}")
   statecountsyncing             String?
   listRegistry                  String?
-  copy                          Boolean?
+  copy                          String?
   tz                            String?
   smtp                          Json?     @default("{}")
   imap                          Json?     @default("{}")
@@ -36,7 +36,7 @@ model iad {
   smtpEhloName                  String?
   path                          String?
   webhooks                      String?
-  webhookErrorFlag              Json?     @default("{}")
+  webhookErrorFlag              String?    
 }
 
 model iat{
