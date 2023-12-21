@@ -5,6 +5,7 @@ RUN apk add --no-cache dumb-init
 WORKDIR /emailengine
 COPY . .
 
+RUN rm -rf package-lock.json
 RUN npm install --omit=dev
 RUN npm run prepare-docker
 RUN chmod +x ./update-info.sh
